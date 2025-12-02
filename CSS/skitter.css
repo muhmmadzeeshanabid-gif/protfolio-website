@@ -1,7 +1,12 @@
 .skitter {
   position: relative;
   max-width: 100%;
-  height: 300px;
+  /*
+    Use a responsive clamp for the slider height so it's compact but
+    still responsive. Reduced maximums so slider doesn't appear too tall.
+    Min: 120px, Preferred: 24vh, Max: 240px
+  */
+  height: clamp(120px, 24vh, 240px);
   background: black;
 }
 .skitter.with-dots {
@@ -28,9 +33,14 @@
   overflow: hidden;
 }
 .skitter .image > a img,
-.skitter .image > img {
+.skitter .image > img,
+.skitter .box_clone img,
+.skitter > img {
   width: 100%;
-  display: none;
+  height: 100%;
+  display: block !important;
+  object-fit: contain; /* keep entire image visible (no heavy cropping) */
+  object-position: center center;
 }
 .skitter .box_clone {
   position: absolute;
@@ -46,6 +56,20 @@
   top: 0;
   left: 0;
   z-index: 20;
+}
+
+/* Responsive slider heights */
+/* Make tablet/mobile slightly shorter than desktop, handled via clamp above but keep gentle overrides */
+@media (max-width: 992px) {
+  .skitter {
+    height: clamp(100px, 28vh, 200px);
+  }
+}
+
+@media (max-width: 600px) {
+  .skitter {
+    height: clamp(90px, 32vh, 140px);
+  }
 }
 .skitter .prev_button {
   position: absolute;
