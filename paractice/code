@@ -1,0 +1,68 @@
+<!-- <h1>Welcome</h1> -->
+<!-- <img src="banner-01.jpg" alt="image 1" / width="400px" id="a"> <img
+    src="banner-02.jpg" alt="image 2" / width="400px" id="b"> <img
+    src="banner-03.jpg" alt="image 3" / width="400px" id="c"> -->
+<!-- <div id="heading">
+      <h1 id="s">S</h1>
+      <h1 id="t">T</h1>
+      <h1 id="p">P</h1>
+    </div>
+    <center>
+      <button>Hide</button>
+    </center>
+    <button>hide & show</button> -->
+
+<!-- <img src="banner-01.jpg" alt="1" width="400px" id="img1" /><br /> -->
+<!-- <button>Click</button> -->
+
+<!--             new code start        -->
+<!-- <h1>zeeshan</h1>
+    <h2 id="select-element-by-id">Zeeshan-Abid</h2>
+    <p id="test-work">Hello!</p>
+
+    <h2 class="select-element-by-id">Zeeshan</h2>
+    <p class="test-work">Hello! world</p> -->
+
+<!-- <header>
+      <h3 id="brand">jquery</h3>
+    </header>
+    <section id="secound">
+      <h3 class="brand2">paractice jquery....</h3>
+    </section>
+     -->
+<!-- 
+    <h1 title="from">Welcome</h1> -->
+
+<!-- new code start -->
+<!-- <h1>Hello! Zeeshan-Abid.</h1> -->
+
+<!-- new code start -->
+
+<!-- button>Click Me</button> -->
+<!-- 
+    <h1>Welcome to our website</h1>
+    <div id="bg"></div>
+    <div id="modal"></div> -->
+
+/* #heading { border: 1px solid black; display: flex; align-items: center;
+justify-content: center; } button { font-size: 30px; padding: 10px 30px;
+margin-top: 20px; cursor: pointer; background-color: red; color: white; border:
+none; border-radius: 5px; } */ /* h1 { font-size: 100px; font-family:
+sans-serif; text-align: center; } */ /* #bg { width: 100%; height: 100%;
+position: absolute; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.7);
+display: none; } */ #modal { width: 25%; height: 300px; background-color: white;
+position: absolute; top: -800px; left: 50%; transform:
+translate(-50%);paractice/code border-radius: 10px; box-shadow: 0 0 10px rgba(0,
+0, 0, 0.5); }img { display: none; } ========================== */ .row-four {
+width: 100%; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;
+padding: 40px 20px; margin: 40px 0; } .row-four > .col { flex: 1; min-width:
+300px; max-width: 400px; } .user { width: 100%; border-radius: 15px; padding:
+30px; height: 100%; transition: transform 0.3s ease; } .user:hover { transform:
+translateY(-5px); } .user-top { display: flex; align-items: center;
+margin-bottom: 20px; } .user-pic { width: 70px; height: 70px; border-radius:
+50%; overflow: hidden; margin-right: 20px; border: 3px solid white; } .user-pic
+img { width: 100%; height: 100%; object-fit: cover; } .user-name h2 {
+font-family: "Maven Pro", sans-serif; font-size: 22px; margin: 0 0 5px; }
+.user-name small { font-family: "Maven Pro", sans-serif; color: #666; font-size:
+14px; } .user-bottom p { font-size: 16px; font-family: "Maven Pro", sans-serif;
+line-height: 1.7; margin: 0; font-style: italic; }
