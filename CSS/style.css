@@ -1,0 +1,695 @@
+/* ==========================
+   RESET & GLOBAL STYLES
+========================== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================
+   MENU STYLES
+========================== */
+#menu {
+  display: none;
+}
+
+/* ---------- Desktop vs Mobile ---------- */
+@media (max-width: 992px) {
+  .desktop-menu {
+    display: none; /* hide desktop menu on tablet/mobile */
+  }
+  .slicknav_menu {
+    display: block; /* show mobile menu */
+  }
+}
+
+@media (min-width: 993px) {
+  .desktop-menu {
+    display: flex; /* show desktop menu on large screens */
+  }
+  .slicknav_menu {
+    display: none;
+  }
+}
+
+/* ---------- Desktop Menu Container ---------- */
+.desktop-menu {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 5px 8px #323232;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 999;
+}
+
+/* ---------- Menu List & Items ---------- */
+.list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.desktop-menu li {
+  padding: 20px;
+}
+
+.desktop-menu li a {
+  text-decoration: none;
+  color: #323232;
+  font-weight: 700;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 20px;
+}
+
+.desktop-menu li:hover {
+  background-color: black;
+}
+
+.desktop-menu li:hover a {
+  color: white;
+}
+
+/* ---------- Brand Name ---------- */
+.brand_name {
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.brand_name a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #0008ff;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+}
+
+/* ==========================
+   SECTION HEADINGS
+========================== */
+#about,
+#projects {
+  text-align: center;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+#headings {
+  text-align: center;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+#heading {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+  margin-top: 50px;
+  text-align: center;
+}
+#p-heading {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+  margin-top: 30px;
+
+  text-align: center;
+}
+#p-heading p {
+  font-size: 18px;
+  align-items: justify;
+  font-family: sans-serif;
+}
+/* ==========================
+   PROJECT / CARDS SECTION
+========================== */
+.my-project {
+  padding-left: 100px;
+  padding-right: 100px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* Responsive padding */
+@media (max-width: 600px) {
+  .my-project {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Row and Columns for projects */
+.row_one,
+.row-three {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* desktop/laptop spacing for About (row_one) */
+.row_one {
+  gap: 22px;
+  justify-content: space-between;
+}
+
+/* add a gap so project cards don't stick together */
+.row-three {
+  /* use CSS grid for a reliable multi-column layout */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* Testimonials (row-four) — on desktop/laptop show three side-by-side with gap */
+.row-four {
+  gap: 22px;
+  justify-content: space-between;
+}
+.row-four > .col {
+  /* 3-up layout for testimonial cards on wider screens */
+  flex: 0 0 32%;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
+
+/* project card styling — keep cards separate and give visual breathing room */
+.project {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  margin: 6px 0; /* vertical spacing between stacked cards */
+  box-sizing: border-box;
+}
+.project img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Row-three (PROJECT OVERVIEW)
+   - Desktop / large screens: 4 columns (default)
+   - Tablet range (601px — 992px): 2 columns (two per row)
+   - Mobile (<=600px): 1 column (full width stacked)
+*/
+@media (min-width: 601px) and (max-width: 992px) {
+  /* tablet: two columns */
+  .row-three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  /* mobile: single column */
+  .row-three {
+    grid-template-columns: 1fr;
+  }
+
+  /* project card styling — keep cards separate and give visual breathing room */
+  /* keep default project styles (defined globally) */
+}
+
+.fast_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  border-bottom: 4px solid #2fb7fa;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #ccc;
+  margin: 15px 0;
+}
+
+.fast_box h2 {
+  font-family: "Maven Pro", sans-serif;
+  margin: 10px 0;
+}
+
+.fast_box p {
+  font-family: "Maven Pro", sans-serif;
+  margin: 0;
+}
+
+.fast_box div {
+  width: 100px;
+  height: 100px;
+  background-color: #dbf3fe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fast_box div span {
+  font-size: 60px;
+  color: #2fb7fa;
+}
+
+/* ---------- Responsive for Projects ---------- */
+@media (max-width: 992px) {
+  .row_one {
+    flex-direction: column;
+  }
+  /* row-three layout handled by grid media queries above */
+}
+
+/* make general columns collapse to full width only on small screens <=600px
+   (this prevents small-tablet widths from forcing 1-col everywhere) */
+@media (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* row-three layout handled by grid media queries above */
+}
+
+/* ==========================
+   TWO-COLUMN LAYOUT
+========================== */
+.row_two {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* vertically center left & right columns */
+}
+
+.col_left,
+.col_right {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .col_left,
+  .col_right {
+    width: 100%;
+  }
+}
+
+.col_left {
+  display: flex;
+  justify-content: center;
+}
+
+.col_right {
+  padding: 30px;
+}
+
+.col_right h1 {
+  text-align: center;
+  font-family: "Maven Pro", sans-serif;
+}
+
+/* ==========================
+   SKILLS / PROFILE
+========================== */
+.skill-profile {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px;
+}
+
+/* Avatar wrapper */
+.skill-avatar-wrap {
+  width: 300px;
+  height: 300px;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 180ms ease, transform 220ms ease;
+}
+
+.skill-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 8px solid #fff;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  transition: transform 220ms ease, filter 220ms ease;
+  display: block;
+}
+
+.skill-name {
+  margin: 6px 0 0;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.05;
+}
+
+.skill-role {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.skill-intro {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #444;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Avatar hover effect */
+.skill-avatar-wrap:hover {
+  background-color: #000;
+  transform: translateY(-4px);
+}
+
+.skill-avatar-wrap:hover .skill-avatar {
+  transform: scale(1.06);
+}
+
+/* ---------- Responsive Skills ---------- */
+@media (max-width: 992px) {
+  .skill-avatar-wrap {
+    width: 240px;
+    height: 240px;
+    padding: 10px;
+  }
+  .skill-avatar {
+    object-position: center 34%;
+  }
+  .skill-name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-avatar-wrap {
+    width: 200px;
+    height: 200px;
+    padding: 8px;
+  }
+  .skill-avatar {
+    object-position: center 30%;
+  }
+  .skill-name {
+    font-size: 16px;
+  }
+}
+
+/* ==========================
+   PROGRESS BARS
+========================== */
+.progress-box {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ddd;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.progress-box span {
+  color: white;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.progress-bar-html {
+  width: 0%;
+  background-color: green;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.progress-bar-css {
+  width: 0%;
+  background-color: orange;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.progress-bar-bootstrap {
+  width: 0%;
+  background-color: red;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.progress-bar-mquery {
+  width: 0%;
+  background-color: blue;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.progress-bar-js {
+  width: 0%;
+  background-color: purple;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.progress-bar-jquery {
+  width: 0%;
+  background-color: brown;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.progress-bar-git {
+  width: 0%;
+  background-color: black;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ========================== TESTIMONIAL / USER SECTION  */
+.row-four {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 40px 0;
+}
+.row-four > .col {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+.user {
+  width: 100%;
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.user:hover {
+  transform: translateY(-5px);
+}
+.user-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.user-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  border: 3px solid white;
+}
+.user-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user-name h2 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 22px;
+  margin: 0 0 5px;
+}
+.user-name small {
+  font-family: "Maven Pro", sans-serif;
+  color: #666;
+  font-size: 14px;
+}
+.user-bottom p {
+  font-size: 16px;
+  font-family: "Maven Pro", sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive for testimonial cards */
+@media (max-width: 992px) {
+  /* Tablet: show testimonial cards as single full-width rows */
+  .row-four {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .row-four > .col {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .row-four .user {
+    padding: 18px;
+  }
+  .row-four .user-pic img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .row-four {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .row-four > .col {
+    width: 100%;
+    padding: 0;
+  }
+  .row-four .user {
+    padding: 14px;
+  }
+  .row-four .user-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .row-four .user-pic img {
+    width: 64px;
+    height: 64px;
+  }
+  .row-four .user-name h2,
+  .row-four .user-name small {
+    text-align: left;
+  }
+}
+
+/* ==========================
+   FOOTER
+========================== */
+#site-footer {
+  background-color: #e6e6e6;
+  color: #222;
+  padding: 28px 18px 12px;
+  font-family: "Maven Pro", sans-serif;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 8px 20px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-name {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.footer-contact a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 20px;
+  transition: transform 150ms ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-right {
+    margin-top: 6px;
+  }
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ==========================
+   OTHER ELEMENTS
+========================== */
+.left-side {
+  color: white;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+#footer-pg p {
+  color: white;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.footer-bottom {
+  padding: 15px;
+  text-align: center;
+}
